@@ -1,26 +1,7 @@
 #!/bin/sh
 
-RELEASE_NOTES=""
-RELEASE_NOTES_FILE=""
-
-if [[ -z ${INPUT_RELEASENOTES} ]]; then
-        RELEASE_NOTES="$(git log -1 --pretty=short)"
-else
-        RELEASE_NOTES=${INPUT_RELEASENOTES}
-fi
-
-if [[ ${INPUT_RELEASENOTESFILE} ]]; then
-        RELEASE_NOTES=""
-        RELEASE_NOTES_FILE=${INPUT_RELEASENOTESFILE}
-fi
-
-if [ -n "${INPUT_SERVICECREDENTIALSFILE}" ] ; then
-    export GOOGLE_APPLICATION_CREDENTIALS="${INPUT_SERVICECREDENTIALSFILE}"
-fi
-
-if [ -n "${INPUT_TOKEN}" ] ; then
-    export FIREBASE_TOKEN="${INPUT_TOKEN}"
-fi
+ls -lrt
+printenv
 
 firebase \
         appdistribution:distribute \
