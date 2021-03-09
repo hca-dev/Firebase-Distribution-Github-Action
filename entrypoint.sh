@@ -5,7 +5,7 @@ printenv
 
 firebase \
         appdistribution:distribute \
-        "$INPUT_FILE" \
+        "$INPUT_FILE/$INPUT_FILE" \
         --app "$INPUT_APPID" \
         --groups "$INPUT_GROUPS" \
         --release-notes "test" \
