@@ -8,4 +8,5 @@ firebase \
         "$INPUT_FILE" \
         --app "$INPUT_APPID" \
         --groups "$INPUT_GROUPS" \
-        --release-notes "test"
+        --release-notes "test" \
+        --token "$INPUT_TOKEN"
